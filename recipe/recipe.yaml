@@ -1,19 +1,19 @@
 context:
   name: lbcta
-  version: 1.1.15
-  python_min: 3.9
+  version: "1.1.17"
+  python_min: '3.9'
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-- url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: a60c09d5fdae1a123a566a9bf74c8712eed2b8a75ff6ae4c8bbf7b343fa7ca47
+  - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+    sha256: 5d2b00305c4c67f54c5a07fc2aa10823ab23c3ceb79601fd52a7b8aca3a16a82
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install .
   python:
     entry_points:
@@ -24,13 +24,13 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - pip
-  - setuptools
-  - setuptools_scm
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+    - setuptools_scm
   run:
-  - python >=${{ python_min }}
-  - setuptools
+    - python >=${{ python_min }}
+    - setuptools
 
 tests:
   - python:
