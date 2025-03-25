@@ -1,6 +1,6 @@
 context:
   name: lbcta
-  version: "1.1.16"
+  version: "1.1.17"
   python_min: '3.9'
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: c4140de35a3a5c104c51bacafa262f74cd754594b6d0d49feaf375054f0aca18
+    sha256: 5d2b00305c4c67f54c5a07fc2aa10823ab23c3ceb79601fd52a7b8aca3a16a82
 
 build:
   noarch: python
